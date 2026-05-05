@@ -38,6 +38,10 @@ Selon le choix de votre hyperviseur (soit de type 1 ou 2), il sera nécessaire d
 - Une fois la machine terminée, nous pouvons éventuellement la pousser dans l'hyperviseur de type 1, vCenter dans notre cas. 
 
 
+## Création de la machine virtuelle
+
+![[vmware.png|559]]
+
 ## Gestion des utilisateurs
 
 Sur PHPMy Admin, on retrouve la table "users" qui contient la liste des utilisateurs 
