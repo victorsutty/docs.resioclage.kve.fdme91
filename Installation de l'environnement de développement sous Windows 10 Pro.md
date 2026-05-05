@@ -14,12 +14,12 @@ la **production** et celui de **développement**
 
 L'un est fait pour tester les fonctionnalités, tenter de résoudre des bugs, et visuellement déceler le fonctionnement de la plateforme. On l'appelle l'environnement de **développement et d'expérimentation.** C'est sur ce médium qu'on peut se permettre de tester des choses, sans risquer la compromission de la production.
 
-![[Fichier 3.png|680]]
+![[illustpng-dev.png]]
 
 L'autre, activement utilisé par les adhérents, celui sur lequel les gens se connectent, intéragissent, consultent et parfois modifient des informations, accessible depuis l'adresse ```wiki.resioclage.info```, est appelé **environnement de production.** Son fonctionnemment, son intégrité et sa sécurité sont essentiels pour l'association. Lors de la manipulation des programmes, on prendra garde à sauvegarder, et à appliquer la procédure d'accès. 
 
-![[Fichier 4.png|697]]
 
+![[illustpng-prod.png]]
 
 ## Besoins préalables
 
