@@ -1,4 +1,7 @@
 
+
+## Fichier de config à backuper 
+
 >[!WARNING]
 Pendant l'installation, bien penser à faire une sauvegarde du fichier de configuration de MediaWiki, pour au cas ou si ça plante à l'adresse :
 
