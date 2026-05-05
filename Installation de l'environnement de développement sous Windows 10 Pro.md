@@ -10,8 +10,11 @@ En ce mois de mars, le conseil directif de notre association s'est rassemblé po
 ## Introduction technique
 
 Au sein de la DSI, il existe deux environnements de MédiaWiki. 
+la **production** et celui de **développement**
 
 L'un est fait pour tester les fonctionnalités, tenter de résoudre des bugs, et visuellement déceler le fonctionnement de la plateforme. On l'appelle l'environnement de **développement et d'expérimentation.** C'est sur ce médium qu'on peut se permettre de tester des choses, sans risquer la compromission de la production.
+
+![[Fichier 3.png|417]]
 
 L'autre, activement utilisé par les adhérents, celui sur lequel les gens se connectent, intéragissent, consultent et parfois modifient des informations, accessible depuis l'adresse ```wiki.resioclage.info```, est appelé **environnement de production.** Son fonctionnemment, son intégrité et sa sécurité sont essentiels pour l'association. Lors de la manipulation des programmes, on prendra garde à sauvegarder, et à appliquer la procédure d'accès. 
 
@@ -25,7 +28,12 @@ L'autre, activement utilisé par les adhérents, celui sur lequel les gens se co
 
 ## Préparation
 
+Selon le choix de votre hyperviseur (soit de type 1 ou 2), il sera nécessaire de créer une machine virtuelle, un véritable ordinateur virtuel. Nous choissisons de CREER notre environnement sur VmWare Workstation Pro (type2) car :
 
+- Faire des sauvegardes de manière réccurente, sous la forme de "snapshots" est simple
+- L'ergonomie y est bonne, et le visualiseur réactif
+- Nous pouvons normer l'affichage en 4:3 pour produire une documentation homogène
+- Une fois la machine terminée, nous pouvons éventuellement la pousser dans l'hyperviseur de type 1, vCenter dans notre cas. 
 
 
 ## Gestion des utilisateurs
