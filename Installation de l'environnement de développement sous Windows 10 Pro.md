@@ -18,8 +18,13 @@ L'autre, activement utilisé par les adhérents, celui sur lequel les gens se co
 
 ## Besoins préalables
 
+- Un ordinateur sous Microsoft Windows, de noyau Linux, ou un Macintosh d'Apple
+- L'accès à un compte privilégié (Administrateur) sur cet ordinateur
+- Un hyperviseur de type 1 hébergé sur un serveur (VMware ESXi, Microsoft Hyper-V, Proxmox) ou un hypervisueur de type 2 (Une application de virtualisation sur cet ordinateur comme UTM, VmWare Workstation Pro, VirtualBox)
+- Un peu de temps
 
 ## Préparation
+
 
 
 
