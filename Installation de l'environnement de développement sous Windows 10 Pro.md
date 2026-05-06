@@ -282,7 +282,243 @@ Le système continue de s'installer.
 
 ![[w10-install-load3.png]]
 
+Après tous ces messages, l'environnement de bureau de Windows 10 apparait. Nous pouvons à présent installer les programmes requis pour installer MediaWiki pour le développement.
+
 ![[w10-install-loaded.png]]
+
+## Installer les additions invité
+
+Le logiciel VMWare propose une pile à installer sur le système d'exploitation virtuel pour faciliter l'ergonomie et améliorer les performances. 
+
+Installez le en cliquant sur "Installer Tools" en bas à droite
+
+![[w10-install-installed.png]]
+
+Windows détecte le disque virtuel d'installation des additions. 
+
+![[w10-install-vmtoolsload.png]]
+
+Ouvrez l'explorateur de fichiers, puis naviguez dans le lecteur DVD. Cliquez dessus
+
+![[w10-install-vmtoolsexpl.png]]
+
+Un UAC (fenêtre d'autorisation) apparait, cliquez sur Oui
+
+![[w10-install-vmtoolsexpluacok.png]]
+
+La fenêtre d'installation apparait, cliquez sur suivant
+
+![[w10-install-vmtool2.png]]
+
+Choisissez l'installation complète 
+
+![[w10-install-vmtoolcompl.png]]
+
+Cliquez sur Installer
+
+![[w10-install-vminst.png]]
+
+![[w10-install-vminst2.png]]
+
+L'installateur vous demande de redémarrer la machine virtuelle. Cliquez sur Oui
+
+![[w10-install-vminstreboot.png]]
+
+La machine redémarre 
+
+![[w10-install-vminstreboot1.png]]
+
+## Préparation de l'environnement
+
+Avant de commencer à développer, il est conseillé de mettre Windows 10 à jour, pour éviter des problèmes de stabilité.
+
+![[w10-maj.png]]
+
+Quand vous êtes de nouveau sur le bureau, cliquez sur le bouton windows, puis saisissez "upd", puis appuyez sur entrée pour ouvrir le panneau des mises à jour.
+
+![[w10-majsrc.png]]
+
+Le panneau de Windows Update apparait. 
+Scrollez, vous verrez que l'outil commence à chercher les mises à jour. 
+
+![[w10-majdwd.png]]
+
+Attendez que les installations soit terminées, pas seulement leur téléchargement
+
+![[w10-majdwdwait.png]]
+
+![[w10-majdwdwaitinst2.png]]
+
+Lorsque tout les statuts sont sous Redémarrage en attente, cliquez sur Redémarrer. 
+
+![[w10-majdwdrdytoreboot.png]]
+
+![[w10-coreupd.png]]
+
+Après les MAJ, l'ordinateur virtuel redémarre
+
+![[w10-conn.png]]
+
+L'ordinateur est désormais à jour !
+
+![[w10-edge.png]]
+
+Ouvrez le navigateur Edge en double cliquant sur son icone
+
+La fenêtre du navigateur s'ouvre. Une panoplie de demandes vous sera faite. À chaque demande, refusez les services additionnels en cliquant toujours comme sur la procédure
+
+![[w10-edgeskip.png]]
+
+![[w10-edgeskip1.png]]
+
+![[w10-edgeskip2.png]]
+
+![[w10-edgeskip3.png]]
+
+Enfin, vous arrivez sur la barre de recherche. 
+
+## Installation de WampServer
+
+Tapez "https://wampserver.aviatechno.net/". Vous pouvez copier coller ce texte dans la machine virtuelle. 
+
+![[w10-wamprealsite.png]]
+
+Ce site référence et distribue les paquets d'installation de WAMPServer, ses mises à jour, ses plugins, mais aussi un outil permettant d'installer les dépendances C++ sans prise de tête. 
+
+Cliquez sur Wampserver x.x.x, en dessous de "Last Wampserver full install version", pour télécharger wampserver. 
+ ![[w10-wampdwd.png]]
+
+Le navigateur vous notifie que le téléchargement est fait. 
+
+### Vérification de l'authenticité de WAMP
+
+Avant d'exécuter l'installateur, il faut vérifier si son contenu est bien celui annoncé sur le site, pour s'assurer de son authenticité. Pour cela, nous allons utiliser le hash MD5 qui est présent sur le site. On ne peut pas le voir, car le site est trop zoomé. 
+
+Dézoomez en allant cliquer sur ... dans la barre supérieure du navigateur puis - à coté du pourcentage d'échelle
+
+![[w10-wampresizemd5.png]]
+
+Sélectionnez le hash, puis copiez le à l'aide de CTRL + C
+
+![[w10-wampresizemd5tooglectrl.png]]
+
+Minimisez Edge, et ouvrez l'explorateur de fichiers. 
+wampserver est bien présent. 
+
+![[w10-deskreddwdexpl.png]]
+
+Afin de vérifier l'authenticité, cliquez sur le menu windows, puis tapez "cmd" puis entrée pour ouvrir le shell. 
+
+![[w10-deskcmd.png]]
+
+Tapez ```cd Downloads``` pour naviguer dans le répertoire des téléchargements
+
+![[w10-deskcmddir2.png]]
+
+Tapez ```certutil -hashfile``` puis tapez wamp puis appuyez sur tabultation pour autocompléter le nom de l'exécutable puis espace puis tapez MD5. Appuyez sur entrée si la commande correspond à : hormis les x pour la version
+
+```
+certutil -hashfile wampserverx.x.x_x64.exe MD5
+```
+
+
+![[w10-deskcmddir3.png]]
+
+La commande s'exécute
+
+![[w10-deskcmdhashok.png]]
+
+Ouvrez le bloc notes
+
+![[w10-blcnotes.png]]
+
+Collez le hash de tout à l'heure avec CTRL + V
+
+![[w10-blcnotes3.png]]
+
+notez sa provenance
+
+![[w10-blcnotes4.png]]
+
+reprenez le hash de l'invite de commande en le séléctionnant, puis en faisant CTRL + MAJ + C
+
+![[w10-blcnotes6.png]]
+
+et collez le dans le bloc notes pour le comparer avec celui du site.
+
+![[w10-blcnotes7.png]]
+
+Si vous avez du mal à lire le hash sans sauter des yeux comme moi, on peut les comparer dans l'invite de commande directement. 
+
+![[w10-blcnotes8.png]]
+
+Reprenez le shell et tapez 
+
+```
+if "le hash site" == "le hash certutil" (echo OK)
+```
+
+![[w10-blcnotes9.png]]
+
+
+![[w10-blcnotes10.png]]
+
+Si le code renvoie OK, nous pouvons passer à l'installation de WAMP
+
+![[w10-blcnotes10attentionresult.png]]
+
+Fermez l'invite de commande et le bloc notes, puis descendez sur le site jusqu'a 
+### Best way to install Visual C++ Redistributable Packages
+
+![[w10-wampscrolldown.png]]
+
+Le site propose un executable qui installe toutes les dépendances d'un coup. Cliquez sur le lien, 
+puis cliquez sur télécharger en sélectionnant le miroir
+
+![[w10-wampredist.png]]
+
+![[dwd-aio.png]]
+
+![[dwd-aiodwd.png]]
+
+Comme avec Wamp, il faut vérifier l'authenticité du fichier. Copiez le MD5
+
+![[dwd-aiodwdmd5.png]]
+
+Notez le dans le bloc notes
+
+![[dwd-aiodwdmd5redistblc.png]]
+
+ouvrez l'invite de commande 
+
+![[w10-cmdopen.png]]
+
+Allez dans le répertoire de téléchargement avec ```cd Desktop``` puis listez les élements avec ```dir``` 
+Utilisez l'auto-complétion pour le nom du fichier d'installation
+
+![[w10-certutilruntime.png]]
+
+```
+certutil -hashfile Visual-C-Runtimes-All-in-One-xx-xx.zip
+```
+
+![[w10-certutilruntime3.png]]
+
+```
+if "le hash site" == "le hash certutil" (echo OK)
+```
+
+![[w10-certutilsha1purée.png]]
+
+>[!INFO] Ici, la comparaison échoue, car les deux caractères ne sont pas en majuscule.
+
+
+
+
+>[!INFO] Une dépendance, c'est un ou plusieurs logiciels qu'on doit installer avant d'installer le programme désiré. Si ces logiciels ne sont pas installés avant, le logiciel en question ne fonctionnera pas ou pas bien. 
+
+
+
 
 ## Gestion des utilisateurs
 
