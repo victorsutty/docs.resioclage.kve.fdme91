@@ -518,7 +518,78 @@ if "le hash site" == "le hash certutil" (echo OK)
 >[!INFO] Une dépendance, c'est un ou plusieurs logiciels qu'on doit installer avant d'installer le programme désiré. Si ces logiciels ne sont pas installés avant, le logiciel en question ne fonctionnera pas ou pas bien. 
 
 
+Une fois que les deux sources sont vérifiées, nous allons extraire le fichier .zip des dépendances. Pour ce faire, cliquez droit, puis cliquez sur Extraire tout
 
+![[w10-extract.png]]
+
+Cliquez sur extraire
+![[w10-extract2.png]]
+
+Une fois que les fichiers sont extraits, on peut exécuter le script "install_all" pour lancer l'installation groupée de tous les paquets.
+
+![[w10-batchinstall.png]]
+
+Cliquez sur Exécuter
+
+![[w10-batchinstalladmex.png]]
+
+Pensez a cliquer sur oui a chaque prompt UAC 
+
+![[w10-batchinstalladmexuac.png]]
+
+
+L'installation progressra sous forme de plusieurs installations.
+
+
+![[loadred.png]]
+
+On peut à présent ouvrir l'installateur de Wamp
+
+![[w10-wampinstall.png]]
+
+en prenant soin de dire oui à l'UAC
+
+![[w10-wampinstalluac.png]]
+
+Sélectionnez la langue
+
+![[w10-wampinstalllang.png]]
+
+Accepter la licence
+
+![[w10-wampinstallic.png]]
+
+Nous avons installer les redist, donc suivant
+
+![[w10-wampinstallredistwarn.png]]
+
+Garder le chemin racine de Wamp
+
+![[w10-wampinstallrootc.png]]
+
+Chargement
+
+![[w10-wampinstallrootc5.png]]
+
+Choisir les applications par défaut, en mettant tout sur oui. 
+
+![[w10-wampinstallrootc7.png]]
+Suivant
+![[w10-wampinstallinf.png]]
+
+Installation terminée, cliquez sur terminer
+
+![[w10-wampinstallend.png]]
+
+Avec l'explorateur de fichiers, naviguez dans le disque local C:
+
+![[w10-wamproot.png]]
+
+Rendez vous dans wamp64
+
+![[w10-wampwww.png]]
+
+On y retrouve le répertoire www 
 
 ## Gestion des utilisateurs
 
