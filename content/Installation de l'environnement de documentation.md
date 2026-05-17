@@ -1,4 +1,6 @@
+
 [[Gestion de la documentation DSI avec Quartz et Markdown]]
+
 
 Pour bénéficier d'un site ou l'on retrouve l'explication du code, des systèmes et des services hébergés chez resioclage, nous avons décidé de mettre en place Hugo, un moteur de rendu des pages Markdown.
 
@@ -296,6 +298,9 @@ mon-projet/            <-- le répertoire docs.ppe3.kve.fdme
 Il faut donc réarranger notre environnement, qui jusqu'ici, ressemblait à ça :
 
 ![[58. Obsidian éditeur.png]]
+On a donc réorganisé la structure du répertoire pour matcher avec les exigences du moteur de rendu. 
+
+![[59. Obsidian remake.png]]
 
 
 ```
