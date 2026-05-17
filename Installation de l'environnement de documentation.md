@@ -113,6 +113,9 @@ On peut à présent donner un nom à la machine.
 ![[30. hostname.png]]
 Il faut donner un mot de passe pour le compte root, celui qui a tous les droits sur la machine. Nous **allons en saisir un simple**, qu'on changera après. On ne peut pas faire de copier coller, et pour éviter de ne plus pouvoir débloquer notre session si le clavier est mal configuré, c'est plus simple. 
 
+>[!WARNING]
+>Attention à cliquer sur la coche afficher le mot de passe pour vérifier ce que vous écrivez. Il peut arriver que votre clavier soit dans une autre langue que celle qui sera sur la future machine. 
+
 ![[35. flyingsaucer91300 - defroot.png]]
 Cliquer sur continuer
 
@@ -121,11 +124,48 @@ Il faut maintenant créer un compte utilisateur différent de root, avec des dro
 Nous l'apelons **local-user**, car s'il on joint un annuaire comme LDAP ou TACACS, on pourra le dissocier. Il n'est pas nominatif, ce qui est moyen en terme de sécurité.
 
 ![[36. localuser.png]]
+On doit également lui assigner un mot de passe, pareil.
 
+![[37. palmtrees75 - user.png]]
+### Partitionnement du disque
 
+Dans notre contexte, nous allons utiliser tout le disque, pour simplifier l'installation. 
 
+Cliquez sur continuer![[39. entiredisk2.png]]
+On sélectionne le disque virtuel
 
+![[40.disk.png]]
+On sélectionne tout dans une partition
+continuer
 
+Et on applique les changements, puis oui en radiobox.
+
+![[41. finaldisk.png]]
+
+-*Faut il analyser d'autres supports d'installation ?* 
+
+Séléctionnez Non
+
+![[42. Install pkt.png]]
+Le système va s'installer.
+Maintenant, il faut choisir d'ou le système cherchera les MAJ. 
+
+On sélectionne le miroir en france, et le miroir deb.devian.org pour l'archive
+
+![[43. france.png]]
+![[44. archive mirror.png]]
+Dans notre environnement, nous n'avons pas de proxy, donc pas besoin d'en renseigner. Cliquez sur Continuer. 
+
+Choissisez non pour l'étude d'utilisation des paquets.
+
+## Séléction des utilitaires
+
+>[!WARNING]
+>ATTENTION : Retirez l'environnement de bureau Debian. Ici, nous sommes sur un futur serveur auquel on accèdera via une console SSH pour l'administration, et via une page web pour les lecteurs de la documentation. METTRE UN SERVEUR DE BUREAU SUR UN SERVEUR MULTIPLIE LA SURFACE D'ATTAQUE
+
+Pour éditer la séléction, appuyer sur ESPACE ou cliquez sur les cases pour désellectionner les coches. 
+
+![[46. Packets.png]]
 
 
 
