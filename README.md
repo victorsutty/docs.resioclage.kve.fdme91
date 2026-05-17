@@ -9,3 +9,8 @@ Ethan Giraud - Victor Sutty - Kyshor Mermoz
 
 Les articles rédigés en .md sont dans /content
 Les images, icones et documents sont dans /static
+
+## Sites utilisées pratiques
+
+https://mac-cursors.netlify.app/
+https://github.com/devidw/obsidian-to-hugo
