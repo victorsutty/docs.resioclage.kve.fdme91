@@ -86,4 +86,19 @@ Dans la section Disks, laissez le stockage par défaut, 32G suffisent.
 Attention, choissisez bien votre pool de stockage. Dans la section CPU, 4 coeurs suffisent. Sur le type de CPU, choissisez host. ça nous permettra d'utiliser le CPU du serveur et pas une émulation qui rame
 
 ![[23. CPU.png]]
+En mémoire, 4go suffisent. Si votre serveur est plus petit en terme de ram, choissisez 2go soit 2048
 
+Dans network, laissez par défaut sauf si vous avez des réseaux sans internet
+Appuyez sur finish en cochant la case Start after created
+
+Rendez vous dans la machine vituelle sur le panneau a gauche puis console pour ouvrir le moniteur. Sélectionnez Graphical Install et appuyez sur entrée
+
+![[24. Debinstall.png]]
+Sélectionnez la langue pour l'installation (Français)
+
+![[25. FR.png]]
+Choisissez également France pour la situation géographique
+![[26. FR2.png]]
+Prenez la disposition de clavier en français puis Continuer
+
+![[27. FRKB.png]]
