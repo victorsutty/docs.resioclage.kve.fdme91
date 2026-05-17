@@ -56,6 +56,34 @@ Puis, faites Cmd+F ou CTRL+F pour chercher les occurences. Si il y a deux résul
 ![[15. note-srch.png|482]]
 ## Création d'une machine virtuelle Debian
 
+A l'heure ou cet article est écrit, le serveur qui fait tourner les machines virtuelles n'est pas idéal pour faire notre documentation. Il est lent, la résolution est mauvaise et il ne nous permet pas de faire des captures de qualité. 
+
+Comme je suis sur un Mac et que l'architecture est spéciale (arm), j'ai décidé de documenter avec un environnement Proxmox, installé sur un lab. Par la suite, nous pousserons nos machines sur Vcenter, l'environnement de l'asso.
+
+On assigne d'abord un nom à la machine virtuelle, ici ![[22. isosel.png]]
 
 
+![[17. createct-name.png]]
+Avant de créer la machine, il faut importer l'image de debian que nous avons téléchargée dans l'hyperviseur en sélectionnant le pool de stockage local (pve), puis en allant dans iso images. 
+On peut cliquer sur Upload. 
+![[18. createct-iso.png]]
+En cliquant sur select file, on va choisir notre image. 
+
+![[19. isosel.png]]
+
+Ca se passe dans l'explorateur de votre SE.
+![[20. upload.png]]
+Cliquez sur ouvrir puis upload
+
+![[21. upload done.png]]
+
+Si le log montre Task OK, vous pouvez fermer la fenêtre. 
+
+![[22. isosel.png]]
+
+Dans Create:Virtual Machine, laissez les éléments par défaut. 
+Dans la section Disks, laissez le stockage par défaut, 32G suffisent. 
+Attention, choissisez bien votre pool de stockage. Dans la section CPU, 4 coeurs suffisent. Sur le type de CPU, choissisez host. ça nous permettra d'utiliser le CPU du serveur et pas une émulation qui rame
+
+![[23. CPU.png]]
 
