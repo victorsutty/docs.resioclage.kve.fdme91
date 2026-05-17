@@ -176,7 +176,82 @@ Sélectionnez ensuite le disque sur lequel installer GRUB.
 **/dev/sda (scsi-0QEMU_QEMU_HARDDISK_drive-scsi0)**
 
 ![[48. GRUBsel.png]]
+Quand l'installation est terminée, cliquez sur continuer.
 
+![[49. Reboot.png]]
+
+## Connexion à la machine
+
+Quand la machine redémarre, vous arrivez sur la page de connexion. Vous pouvez vous connecter avec les identifiants que nous avons saisi tout à l'heure pendant l'installation, à savoir local-user et son mot de passe. 
+
+![[50. Console Deb Login.png]]
+Maintenant, il faut obtenir l'adresse IP. C'est celle ci qui nous permettra de nous connecter à distance, et de gérer le serveur plus efficacement. On entre alors la commande
+
+```
+ip a
+```
+
+On obtient l'interface boucle lo: ce qui ne nous intéresse pas. La deuxième est celle qu'on utilisera pour se connecter, soit l'interface ens18
+
+![[52. IPA.png]]
+
+Ici, l'adresse est 10.0.0.237
+
+## Connexion à la machine à distance
+
+Si votre ordinateur personnel ou de travail est dans le même réseau que la machine que nous avons installé, vous pouvez vous connecter au système à distance, via SSH (Secure Session H)
+
+Ouvrez votre terminal ou votre console, puis entrez la commande suivante :
+
+```
+ssh local-user@10.0.0.
+```
+
+![[53. SSH fingerprint.png]]
+A la première connexion, votre PC échange une identification de la machine. Il faut l'accepter en tapant yes puis entrée. 
+
+Il faut ensuite saisir le mot de passe de local-user. Dès que vous voyez le shell de la machine, vous êtes connecté. 
+
+![[54. Connected SSH.png]]
+
+## Installation d'hugo
+
+Pour obtenir un serveur web de documentation, il faut installler l'outil qui va générer les pages. Ce logiciel s'apelle Hugo et il est utilisé dans quasiment toutes les grandes boites de développement logiciel, sur les projets communautaires, mais aussi parfois dans les grandes entreprises d'IT. 
+
+Comme pour le MédiaWiki, nous allons suivre la documentation : https://gohugo.io/installation/linux/
+
+Pour installer ce service, c'est un peu comme MediaWiki. On a deux solutions. On peut soit télécharger des binaires, ou compiler le projet pour en faire un binaire custom. 
+
+Notre environnement ne va pas jusqu'ici, nous allons alors installer le logiciel avec le gestionnaire de paquets qui est sur debian, apt. 
+
+![[55. Sudo.png]]
+En essayant d'installer, on se rend compte que sudo, l'utilitaire pour exécuter une commande avec les permissions de l'administrateur, n'est pas installé. Temporairement, on va utiliser la commande su pour devenir administrateur.
+
+```
+su -
+```
+
+Entrez le mot de passe du superutilisateur.
+On se retrouve alors dans le shell root. 
+
+On peut alors installer hugo avec 
+
+```
+apt install hugo
+```
+
+![[56. Hugo PKT.png]]
+Lors de la commande, le système de paquets nous propose d'installer les dépendances (paquets/logiciels) qui permettront le bon fonctionement d'hugo. Pour valider, on tape O puis entrée 
+
+![[57. Hugo PKT2.png]]
+Des lignes vont défiler, ce qui indique que le système télécharge lesdits logiciels.
+
+
+
+
+
+
+## Protection, mesures de sécurité
 
 Il est bon d'en choisir un robuste. Pour cela, il existe des sites comme Dashlane Password Generator ou des applications de bureau comme KeePass pour générer des chaines de caractères complexes. On peut également en générer un dans le terminal. C'est la méthode que je préfère. 
 
