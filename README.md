@@ -1,2 +1,4 @@
-# docs.resioclage.kve.fdme91
-PPE 3 - Documentation de la mise en place d'un MediaWiki sur WAMP &amp; LAMP
+
+Faculté des Métiers de l'Essonne, 1 Rue Galvani, Massy
+mars 2026 à 20 mai 2026
+

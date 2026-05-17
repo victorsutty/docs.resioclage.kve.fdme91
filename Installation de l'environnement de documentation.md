@@ -295,8 +295,7 @@ mon-projet/            <-- le répertoire docs.ppe3.kve.fdme
 
 Il faut donc réarranger notre environnement, qui jusqu'ici, ressemblait à ça :
 
-
-
+![[58. Obsidian éditeur.png]]
 
 
 ```

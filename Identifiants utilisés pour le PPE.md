@@ -1,8 +1,9 @@
 
 
 ## Mot de passe MediaWiki
-administrateur
-MediaWiki!!
+
+Identifiant : administrateur
+Mot de Passe : MediaWiki!!
 
 Rédacteurs auth seulement 
 
