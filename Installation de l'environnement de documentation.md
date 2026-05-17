@@ -218,6 +218,14 @@ Il faut ensuite saisir le mot de passe de local-user. Dès que vous voyez le she
 
 Pour obtenir un serveur web de documentation, il faut installler l'outil qui va générer les pages. Ce logiciel s'apelle Hugo et il est utilisé dans quasiment toutes les grandes boites de développement logiciel, sur les projets communautaires, mais aussi parfois dans les grandes entreprises d'IT. 
 
+J'ai récupéré ça sur le blog d'un devops, mais voilà un brief : 
+
+>[**Hugo**](https://gohugo.io/) est un **générateur de site statique** (SSG) écrit en Go, créé par Steve Francia en 2013. Son principal atout : la **vitesse**. Là où d'autres SSG mettent plusieurs secondes à builder un site, Hugo le fait en quelques dizaines de millisecondes
+
+>On peut le comparer à un **compilateur ultra-rapide pour le web** : on écrit des fichiers Markdown, Hugo les assemble avec des templates Go et produit un site HTML complet, prêt à être servi par n'importe quel serveur web.
+
+Source : https://blog.stephane-robert.info/docs/documenter/hugo/
+
 Comme pour le MédiaWiki, nous allons suivre la documentation : https://gohugo.io/installation/linux/
 
 Pour installer ce service, c'est un peu comme MediaWiki. On a deux solutions. On peut soit télécharger des binaires, ou compiler le projet pour en faire un binaire custom. 
@@ -245,6 +253,60 @@ Lors de la commande, le système de paquets nous propose d'installer les dépend
 
 ![[57. Hugo PKT2.png]]
 Des lignes vont défiler, ce qui indique que le système télécharge lesdits logiciels.
+
+Pour mettre à jour les articles et se synchroniser avec le système de fichiers, on doit utiliser git. 
+
+Installons le comme dans la doc : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+Nous sommes sur debian, donc
+
+```
+apt install git-all
+```
+
+Pareil, on valide les paquets additionnels.
+On peut maintenant vérifier que hugo est bien installé en demandant la version. 
+
+```
+hugo version
+```
+
+Si la console renvoie quelque chose, c'est installé.
+
+
+## Création du projet
+
+Dans le lien que j'ai mis, le quickstart, les développeurs nous montrent comment lancer un projet de zéro, ce qui n'est pas notre cas puisque nous avons déja des images et des fichiers Markdown. 
+
+Dans notre environnement d'édition, la structure de fichiers et de répertoires est complètement libre. Dans Hugo, on a besoin de structurer les fichiers selon leur manière de faire. Il faut bien que le programme qui rend une page web sache ou prendre les fichiers. 
+
+L'arborescence ressemble à ça (généré par ia, édité a la main)
+
+```
+mon-projet/            <-- le répertoire docs.ppe3.kve.fdme
+├── content/          <-- La ou se trouveront les MD Obsidian
+│   └── ma-doc.md
+├── static/.          <-- Le dossier des images et icones
+│   └── screenshots/  <-- Tes images devront être configurées 
+├── themes/
+├── hugo.toml
+└── .git/
+```
+
+Il faut donc réarranger notre environnement, qui jusqu'ici, ressemblait à ça :
+
+
+
+
+
+```
+hugo new project docs.kve.resioclage
+```
+
+On peut naviguer dans le répertoire qui a été créé.
+
+
+
 
 
 
