@@ -589,7 +589,45 @@ Rendez vous dans wamp64
 
 ![[w10-wampwww.png]]
 
-On y retrouve le répertoire www 
+On y retrouve le répertoire www, ou réside l'application web que nous voulons rendre disponible sur le réseau, dans notre cas MediaWiki. 
+
+Si on se rend dans www, on peut observer des pages web pour l'accueil de WampServer. Il ne faut pas les supprimer, car ils permettent une gestion facile des sites.
+
+![[w10-wampbase.png]]
+
+## Installation de MediaWiki
+
+Nous devons d'abord récupérer l'archive de mediawiki, qui contient l'application. Pour la prendre, ouvrez edge, puis tapez mediawiki dans la barre de recherche. On tombe alors sur le premier résultat. Il est important de prendre la version fr car la langue s'applique aussi à l'interface d'administration, pas que en traduction. 
+
+![[w10-mediawikisrc.png]]
+
+![[w10-mediawikisrc2.png]]
+
+![[w10-mediawikisrc4.png]]
+
+![[w10-mediawikisrc5.png]]
+
+![[w10-mediawikisrc6.png]]
+
+Télécharger la signature pour vérification !
+A COMPLETER
+
+![[w10-mediawikisrc7gz.png]]
+
+Après avoir verifié l'image, extraire son contenu en cliquant droit, puis extraire tout
+
+![[w10-mediawikisrcextract.png]]
+
+Cette opération peut prendre un certain temps
+
+![[w10-mediawikisrcextract2.png]]
+
+![[w10-mediawikisrcextract6.png]]
+
+une fois extrait, la fenetre s'ouvre
+
+![[w10-mediawikisrcextract12.png]]
+
 
 ## Gestion des utilisateurs
 
