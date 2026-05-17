@@ -102,3 +102,43 @@ Choisissez également France pour la situation géographique
 Prenez la disposition de clavier en français puis Continuer
 
 ![[27. FRKB.png]]
+Il est possible que le SE se plaigne de ne pas avoir recu une adresse IP via le DHCP. 
+![[28. NODHCP.png]]
+Dans ce cas, on peut soi même saisir l'adresse IP choisie, ce qui est même recommandé pour le serveur, afin de ne pas se retrouver avec une page web ou on ne sait pas ou elle est, qui change dans le temps. Les IP Statiques sont la référence pour les serveurs. 
+
+Dans notre cas, nous nous sommes rendus compte que rien n'était joigniable car nous n'avions pas choisi la bonne interface réseau. Mais c'est bon à savoir dans le cas ou le DHCP n'est pas mis en place dans le réseau. 
+
+![[29. MANUALIP.png]]
+On peut à présent donner un nom à la machine.
+![[30. hostname.png]]
+Il faut donner un mot de passe pour le compte root, celui qui a tous les droits sur la machine. Il est bon d'en choisir un robuste. Pour cela, il existe des sites comme Dashlane Password Generator ou des applications de bureau comme KeePass pour générer des chaines de caractères complexes. On peut également en générer un dans le terminal. C'est la méthode que je préfère. 
+
+Faisons le. 
+
+```
+openssl 
+```
+
+En tapant openssl, on peut retrouver les algorithmes à utiliser. 
+
+Je me suis posé la question de la complexité des mots de passe à mettre pour un compte admin. l'ANSSI, en france, publie des guides et recommendations destinés aux RSSI, Admins etc. 
+
+Voici ce que l'un d'entre eux, qui est super complet cite :
+
+>La robustesse d’un mot de passe est généralement mesurée au moyen de l’entropie, exprimée en bits. L’entropie d’un mot de passe peut être estimée en calculant l’ensemble des mots de passe possibles pour une longueur donnée et une complexité donnée. La longueur est une composante importante de la sécurité d’une authentification par mots de passe. Il est souvent plus efficace d’allonger un mot de passe que de chercher à le rendre plus complexe [5] pour en augmenter l’entropie.
+
+[[anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf]]
+
+Faible à moyen Entre 9 et 11 ≈ 65
+Moyen à fort Entre 12 et 14 ≈ 85
+Fort à très fort Au moins 15 ≥ 100
+
+Page 35, Utiliser un sel aléatoire long argon2id
+
+Il est recommandé d’utiliser un sel choisi aléatoirement pour chaque compte et d’une longueur d’au moins 128 bits. *Les fonctions de hachage cryptographique recommandées, comme la famille SHA2*
+
+Hmm, apparemment, c'est discuté sur les forums. On reccomande plutot argon2id. 
+
+Nous allons donc utiliser la fonction SHA2 via Openssl. ![[32. OpenSSL.png]]
+Tout cela en utilisant une combinaison aléatoire
+![[33. OpenSSL2.png]]
