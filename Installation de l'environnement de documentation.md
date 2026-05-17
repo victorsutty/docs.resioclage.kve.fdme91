@@ -166,8 +166,16 @@ Choissisez non pour l'étude d'utilisation des paquets.
 Pour éditer la séléction, appuyer sur ESPACE ou cliquez sur les cases pour désellectionner les coches. 
 
 ![[46. Packets.png]]
+*-Installer le programme de démarrage GRUB sur le disque principal ?* 
+Oui. 
 
+Il faut installer le bootloader. Sans ce programme, notre machine ne pourra pas démarrer. 
 
+![[47. GRUB.png]]
+Sélectionnez ensuite le disque sur lequel installer GRUB. 
+**/dev/sda (scsi-0QEMU_QEMU_HARDDISK_drive-scsi0)**
+
+![[48. GRUBsel.png]]
 
 
 Il est bon d'en choisir un robuste. Pour cela, il existe des sites comme Dashlane Password Generator ou des applications de bureau comme KeePass pour générer des chaines de caractères complexes. On peut également en générer un dans le terminal. C'est la méthode que je préfère. 
