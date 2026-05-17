@@ -111,7 +111,26 @@ Dans notre cas, nous nous sommes rendus compte que rien n'était joigniable car 
 ![[29. MANUALIP.png]]
 On peut à présent donner un nom à la machine.
 ![[30. hostname.png]]
-Il faut donner un mot de passe pour le compte root, celui qui a tous les droits sur la machine. Il est bon d'en choisir un robuste. Pour cela, il existe des sites comme Dashlane Password Generator ou des applications de bureau comme KeePass pour générer des chaines de caractères complexes. On peut également en générer un dans le terminal. C'est la méthode que je préfère. 
+Il faut donner un mot de passe pour le compte root, celui qui a tous les droits sur la machine. Nous **allons en saisir un simple**, qu'on changera après. On ne peut pas faire de copier coller, et pour éviter de ne plus pouvoir débloquer notre session si le clavier est mal configuré, c'est plus simple. 
+
+![[35. flyingsaucer91300 - defroot.png]]
+Cliquer sur continuer
+
+Il faut maintenant créer un compte utilisateur différent de root, avec des droits réduits. 
+
+Nous l'apelons **local-user**, car s'il on joint un annuaire comme LDAP ou TACACS, on pourra le dissocier. Il n'est pas nominatif, ce qui est moyen en terme de sécurité.
+
+![[36. localuser.png]]
+
+
+
+
+
+
+
+
+
+Il est bon d'en choisir un robuste. Pour cela, il existe des sites comme Dashlane Password Generator ou des applications de bureau comme KeePass pour générer des chaines de caractères complexes. On peut également en générer un dans le terminal. C'est la méthode que je préfère. 
 
 Faisons le. 
 
@@ -133,12 +152,21 @@ Faible à moyen Entre 9 et 11 ≈ 65
 Moyen à fort Entre 12 et 14 ≈ 85
 Fort à très fort Au moins 15 ≥ 100
 
-Page 35, Utiliser un sel aléatoire long argon2id
 
-Il est recommandé d’utiliser un sel choisi aléatoirement pour chaque compte et d’une longueur d’au moins 128 bits. *Les fonctions de hachage cryptographique recommandées, comme la famille SHA2*
 
-Hmm, apparemment, c'est discuté sur les forums. On reccomande plutot argon2id. 
+Il est recommandé d’utiliser un sel choisi aléatoirement pour chaque compte et d’une longueur d’au moins 128 bits. 
 
-Nous allons donc utiliser la fonction SHA2 via Openssl. ![[32. OpenSSL.png]]
+
+
+En tapant openssl, on retrouve les algos dispo. ![[32. OpenSSL.png]]
 Tout cela en utilisant une combinaison aléatoire
 ![[33. OpenSSL2.png]]
+```
+openssl rand -base64 45
+```
+
+45 octets purement aléatoires en mémoire
+
+![[34. OpenSSL3.png]]
+Copiez ce mot de passe dans un gestionnaire de mot de passe et imprimez le et stockez le dans un endroit sécurisé.
+
