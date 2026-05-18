@@ -325,8 +325,45 @@ hugo new project docs.kve.resioclage
 
 On peut naviguer dans le répertoire qui a été créé.
 
+Pour convertir la syntaxe des liens entre les notes, on utilisera un script que j'ai découvert pendant mes recherches, qui s'apelle obsidian_to_hugo.
 
+Pour l'utiliser, il suffit de l'installer avec le gestionnaire de paquets de python, pip. Puis, de le lancer avec la commande. J'ai découvert que les commandes n'étaient pas les mêmes que dans la doc, ici il faut le lancer avec des underscore à la place des tirets. 
 
+```
+python -m obsidian_to_hugo --obsidian-vault-dir vault-documentation --hugo-content-dir  site-hugo/content/
+```
+
+En gros, la commande prend le répertoire d'obsidian, et le répertoire de sortie sur le site-hugo. 
+
+## Lancement du site
+
+Avant de mettre le répertoire en synchro avec git, et lancer le site, on a bien vu qu'il manquait un truc : sudo. On l'installe, ça nous permettra de lancer le site ailleurs que sur l'espace root, ce qui est dangeureux. 
+
+Comme vu en cours, on ajoute l'user tradi au groupe sudo. 
+
+```
+sudo usermod -aG sudo local-user
+```
+
+On peut maintenant sortir de la session root
+
+```
+exit
+```
+
+Et on est de retour sur la session classique
+
+```
+local-user@docs:~$
+```
+
+Maintenant, on peut cloner le repo de notre doc, caractérisé par l'URL vers le. chemin Github, qui contient tous les fichiers. 
+
+L'argument récursive est important, car il permet 
+
+```
+git clone --recursive https://github.com/victorsutty/docs.resioclage.kve.fdme91
+```
 
 
 
