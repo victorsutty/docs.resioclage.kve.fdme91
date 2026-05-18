@@ -302,6 +302,20 @@ On a donc réorganisé la structure du répertoire pour matcher avec les exigenc
 
 ![[59. Obsidian remake.png]]
 
+FINALEMENT, on a décidé de conserver notre structure, mais de séparer notre espace d'édition avec l'espace d'hugo.
+
+![[60. Remake2.png]]
+
+Nous avons une nouvelle contrainte. Il faut que hugo puisse lire les titres, les chemins vers les images. Et vous savez quoi ? Ce n'est pas le meme format. 
+
+Alors, on utilisera un outil très pratique pour convertir :
+
+
+```
+cp -r vault-documentation/img site-hugo/static/
+```
+
+
 
 ```
 hugo new project docs.kve.resioclage
