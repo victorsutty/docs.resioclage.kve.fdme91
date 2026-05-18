@@ -339,6 +339,8 @@ En gros, la commande prend le répertoire d'obsidian, et le répertoire de sorti
 
 Avant de mettre le répertoire en synchro avec git, et lancer le site, on a bien vu qu'il manquait un truc : sudo. On l'installe, ça nous permettra de lancer le site ailleurs que sur l'espace root, ce qui est dangeureux. 
 
+![[61. Install sudo.png]]
+
 Comme vu en cours, on ajoute l'user tradi au groupe sudo. 
 
 ```
@@ -357,7 +359,7 @@ Et on est de retour sur la session classique
 local-user@docs:~$
 ```
 
-Maintenant, on peut cloner le repo de notre doc, caractérisé par l'URL vers le. chemin Github, qui contient tous les fichiers. 
+Maintenant, on peut cloner le repo de notre doc sur le serveur, caractérisé par l'URL vers le. chemin Github, qui contient tous les fichiers. 
 
 L'argument récursive est important, car il permet 
 
@@ -365,9 +367,36 @@ L'argument récursive est important, car il permet
 git clone --recursive https://github.com/victorsutty/docs.resioclage.kve.fdme91
 ```
 
+Je ne comprenais pas pourquoi mon login était incorrect. En fait maintenant, pour des mesures de sécurité, github ne prend plus les mot de passes pour s'authentifier en ligne de commande. Il faut générer une clé. 
+
+![[67. Echec mdp clé.png]]
+On peut la générer via l'espace du profil dans github dans Réglages, Personal Access token Token (classic)
+
+![[Capture d’écran 2026-05-18 à 15.15.10.png]]
+![[Capture d’écran 2026-05-18 à 15.16.37.png]]
+On autoirse la modif des repo et a toucher aux workflows, pas plus. On ne met pas d'expiration au token pour se faciliter la vie. Puis on copie le token et on l'enregistre. Ca sera LE mot de passe à utiliser avec git.
+
+![[Capture d’écran 2026-05-18 à 15.16.54.png]]
+![[72. Sucess clone.png]]
+
+Cool, le repo est cloné !
+
+On installe l'outil de conversion sur le système, mais avant on installe python.
+
+```
+apt install pip
+```
+
+```
+apt install python3
+```
+
+```
+pip install obsidian-to-hugo
+```
 
 
-
+## Lancement d'hugo
 
 
 ## Protection, mesures de sécurité
