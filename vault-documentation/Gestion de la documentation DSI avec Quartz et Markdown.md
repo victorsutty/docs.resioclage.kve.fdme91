@@ -1,16 +1,24 @@
 
-Au sein de la DSI, nous somme plusieurs membres à faire des actions, comme l'installation de logiciels, services et matériels. Une bonne pratique est de documenter ce travail, de manière consistante et procédurale. 
+Au sein de la DSI de Resioclage, nous somme plusieurs à faire des actions, comme l'installation de logiciels, services et matériels. **Une bonne pratique est de documenter ce travail, de manière consistante et procédurale.** 
 
-Comme support, nous avons eu la possibilité d'utiliser le standard en entreprise ou familial (Word ou Powerpoint) qui est très convoité pour sa simplicité. 
+Comme support, nous avons eu la possibilité d'utiliser le standard en entreprise ou familial (Word ou Powerpoint) qui est très convoité pour sa simplicité mais qui présente un défaut. 
+Meme si elle est organisée dans un dossier un dans un unique fichier :
 
-Aujourd'hui, de nombreuses communautés sélectionnent la voie du moderne, en privilégiant un accès uniforme et rapide à la documentation. On peut le retrouver sur 
+- Il faut un logiciel compatible pour la lire
+- Il faut se passer le fichier entre les utilisateurs, ce qui peut créer des doublons, des mélanges de versions
+- L'intégration de photos est parfois une tâche fastidieuse.
+
+Avec la liberté que nous avons en association, nous avons décidé de nous atteler à la manière dont de nombreuses communautés utilisent, en privilégiant un accès uniforme et rapide à la documentation. On peut retrouver cette manière de faire sur :
 
 docs.docker.com
-docs.
+https://docs.portainer.io
+https://docs.github.com/fr
+https://learn.microsoft.com/fr-fr/
+
 
 ### Lancer le serveur Quartz
 
-Sur la VM présente sur l'hyperviseur VCenter vcenter7.info.local, nous avons déployé une machine virtuelle pour héberger ce service. On peut la gérer soit via le KVM via Vcenter en console directe, ou s'y connecter en SSH. 
+Sur l'hyperviseur VCenter vcenter7.info.local, nous avons déployé une machine virtuelle pour héberger ce service. On peut la gérer soit via le KVM via Vcenter en console directe, ou s'y connecter en SSH. 
 
 Le plus pratique selon nous est de se connecter à distance avec le terminal Linux ou Windows depuis les postes dans le domaine info.local. 
 
@@ -20,7 +28,7 @@ Via l'adresse IP
 ssh system@172.16.1.69
 ```
 
-Via le domaine
+Via le domaine (uniquement sur les machines avec un host modifié)
 
 ```
 ssh system@docs.kve.resioclage
