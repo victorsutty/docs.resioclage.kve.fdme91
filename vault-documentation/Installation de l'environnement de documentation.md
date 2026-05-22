@@ -398,6 +398,25 @@ pip install obsidian-to-hugo
 
 ## Lancement d'hugo
 
+Avant de lancer le site, il faut configurer, avec la création d'un fichier hugo.toml. 
+C'est comme un yml, un xlm, c'est un fichier déclaratif. 
+
+On l'édite avec nano
+
+![[76. TOML Hugo.png]]
+On clone le répertoire des thèmes
+![[Capture d’écran 2026-05-18 à 15.56.19.png]]
+On va installer un submodule, parce que l'install manuelle échoue sur plusieurs points....
+
+`git submodule add https://github.com/colinwilson/lotusdocs themes/lotusdocs`
+
+
+La commande hugo mod tidy télécharge les dépendances. 
+
+```
+hugo mod tidy
+```
+
 
 ## Protection, mesures de sécurité
 
