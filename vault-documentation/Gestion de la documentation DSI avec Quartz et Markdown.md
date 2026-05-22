@@ -47,7 +47,15 @@ Pour ce faire, on peut sortir du dossier quartz avec cd ..
 
 Puis cloner le repo :
 
-``git clone https://github.com/victorsutty/docs.resioclage.kve.fdme91``
+```
+git clone https://github.com/victorsutty/docs.resioclage.kve.fdme91
+```
+
+Et lancer la copie.
+
+```
+cp -r docs.resioclage.kve.fdme91/vault-documentation/* /quartz/content/
+```
 
 ## Lancer le serveur Quartz
 
@@ -62,3 +70,13 @@ npx quartz build --serve
 ![[quartz-init.png]]
 
 Le serveur web est donc accessible sur le port 8080. 
+
+
+## MAJ automatique
+
+Quand on push du contenu sur github avec la console git push ou avec obsidian, on aimerait que le serveur se mette à jour automatiquement (qu'il dispose des derniers documents). Une sorte de script qui fasse effacer, puis git clone à nouveau, puis qui relance le serveur. 
+
+Mais on pense qu'il y a mieux. ça semble un peu laborieux comme technique. 
+
+
+https://quartz.jzhao.xyz/setting-up-your-GitHub-repository

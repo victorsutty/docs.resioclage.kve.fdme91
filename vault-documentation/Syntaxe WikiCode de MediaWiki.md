@@ -1,4 +1,3 @@
-# Documentation technique — Wikicode MediaWiki
 
 ## 1. Objectif de la documentation
 
@@ -46,19 +45,19 @@ Les sous-titres permettent d’organiser une page en plusieurs parties.
 ### Niveau 2
 
 ```wiki
-<mark> Introduction </mark>
+== Introduction ==
 ```
 
 ### Niveau 3
 
 ```wiki
-=<mark> Développeur </mark>=
+=== Développeur ===
 ```
 
 ### Niveau 4
 
 ```wiki
-==<mark> Missions principales </mark>==
+==== Missions principales ====
 ```
 
 ### Bonnes pratiques
@@ -67,8 +66,8 @@ Il faut éviter de mettre trop de niveaux de titres. Pour notre wiki, les niveau
 
 ```wiki
 = Titre de la page =
-<mark> Grande partie </mark>
-=<mark> Sous-partie </mark>=
+== Grande partie ==
+=== Sous-partie ===
 ```
 
 ---
@@ -110,9 +109,9 @@ Les listes à puces sont utilisées pour présenter des éléments de manière c
 ### Exemple utilisé dans le wiki
 
 ```wiki
-* [Développement informatique]({{< ref "Développement informatique" >}})
-* [Administration Réseau et système]({{< ref "Administration Réseau et système" >}})
-* [Parcours après un BTS SIO]({{< ref "Parcours après un BTS SIO" >}})
+* [[Développement informatique]]
+* [[Administration Réseau et système]]
+* [[Parcours après un BTS SIO]]
 ```
 
 ---
@@ -148,13 +147,13 @@ Un lien interne permet de relier une page du wiki à une autre page.
 ### Syntaxe
 
 ```wiki
-[Nom de la page]({{< ref "Nom de la page" >}})
+[[Nom de la page]]
 ```
 
 ### Exemple
 
 ```wiki
-[Sécurité informatique]({{< ref "Sécurité informatique" >}})
+[[Sécurité informatique]]
 ```
 
 Ce lien renvoie vers la page **Sécurité informatique**.
@@ -162,7 +161,7 @@ Ce lien renvoie vers la page **Sécurité informatique**.
 ### Exemple avec phrase
 
 ```wiki
-Voir aussi : [Réglementation informatique]({{< ref "Réglementation informatique" >}}).
+Voir aussi : [[Réglementation informatique]].
 ```
 
 ---
@@ -174,13 +173,13 @@ Il est possible d’afficher un texte différent du nom réel de la page.
 ### Syntaxe
 
 ```wiki
-[Texte affiché]({{< ref "Nom de la page" >}})
+[[Nom de la page|Texte affiché]]
 ```
 
 ### Exemple
 
 ```wiki
-Pour en savoir plus, consulter la page [réglementation liée au numérique]({{< ref "Réglementation informatique" >}}).
+Pour en savoir plus, consulter la page [[Réglementation informatique|réglementation liée au numérique]].
 ```
 
 Résultat visible : **réglementation liée au numérique**.
@@ -194,22 +193,22 @@ Dans notre MediaWiki, les liens internes sont importants pour faciliter la navig
 ### Exemples de liens utilisés
 
 ```wiki
-[Accueil]({{< ref "Accueil" >}})
-[Objectifs de l'Association]({{< ref "Objectifs de l'Association" >}})
-[Adhérer]({{< ref "Adhérer" >}})
-[Développement informatique]({{< ref "Développement informatique" >}})
-[Administration Réseau et système]({{< ref "Administration Réseau et système" >}})
-[Parcours après un BTS SIO]({{< ref "Parcours après un BTS SIO" >}})
-[Logiciels et licences]({{< ref "Logiciels et licences" >}})
-[Open source et logiciel propriétaire]({{< ref "Open source et logiciel propriétaire" >}})
-[Sécurité informatique]({{< ref "Sécurité informatique" >}})
-[Réglementation informatique]({{< ref "Réglementation informatique" >}})
-[CNIL]({{< ref "CNIL" >}})
-[Loi HADOPI]({{< ref "Loi HADOPI" >}})
-[Informatique en entreprise]({{< ref "Informatique en entreprise" >}})
-[Rôle d’une DSI]({{< ref "Rôle d’une DSI" >}})
-[Prestataire informatique]({{< ref "Prestataire informatique" >}})
-[Grandes sociétés informatiques]({{< ref "Grandes sociétés informatiques" >}})
+[[Accueil]]
+[[Objectifs de l'Association]]
+[[Adhérer]]
+[[Développement informatique]]
+[[Administration Réseau et système]]
+[[Parcours après un BTS SIO]]
+[[Logiciels et licences]]
+[[Open source et logiciel propriétaire]]
+[[Sécurité informatique]]
+[[Réglementation informatique]]
+[[CNIL]]
+[[Loi HADOPI]]
+[[Informatique en entreprise]]
+[[Rôle d’une DSI]]
+[[Prestataire informatique]]
+[[Grandes sociétés informatiques]]
 ```
 
 ### Bonnes pratiques
@@ -219,12 +218,12 @@ Il est recommandé d’ajouter une section **Pages liées** dans les pages impor
 ### Exemple
 
 ```wiki
-<mark> Pages liées </mark>
+== Pages liées ==
 
-* [CNIL]({{< ref "CNIL" >}})
-* [Loi HADOPI]({{< ref "Loi HADOPI" >}})
-* [Logiciels et licences]({{< ref "Logiciels et licences" >}})
-* [Sécurité informatique]({{< ref "Sécurité informatique" >}})
+* [[CNIL]]
+* [[Loi HADOPI]]
+* [[Logiciels et licences]]
+* [[Sécurité informatique]]
 ```
 
 ---
@@ -236,7 +235,7 @@ En bas de chaque page, on ajoute un lien vers la page d’accueil.
 ### Exemple
 
 ```wiki
-[Accueil]({{< ref "Accueil" >}})
+[[Accueil]]
 ```
 
 Cela permet de revenir facilement au sommaire principal du wiki.
@@ -408,20 +407,20 @@ Modèle:Page thématique
 Ce modèle peut être utilisé pour :
 
 ```wiki
-[Logiciels et licences]({{< ref "Logiciels et licences" >}})
-[Open source et logiciel propriétaire]({{< ref "Open source et logiciel propriétaire" >}})
-[Domaines d’utilisation de l’informatique]({{< ref "Domaines d’utilisation de l’informatique" >}})
-[Sécurité informatique]({{< ref "Sécurité informatique" >}})
-[Réglementation informatique]({{< ref "Réglementation informatique" >}})
-[CNIL]({{< ref "CNIL" >}})
-[Loi HADOPI]({{< ref "Loi HADOPI" >}})
-[Informatique en entreprise]({{< ref "Informatique en entreprise" >}})
-[Rôle d’une DSI]({{< ref "Rôle d’une DSI" >}})
-[Prestataire informatique]({{< ref "Prestataire informatique" >}})
-[Grandes sociétés informatiques]({{< ref "Grandes sociétés informatiques" >}})
-[Parcours après un BTS SIO]({{< ref "Parcours après un BTS SIO" >}})
-[Objectifs de l'Association]({{< ref "Objectifs de l'Association" >}})
-[Adhérer]({{< ref "Adhérer" >}})
+[[Logiciels et licences]]
+[[Open source et logiciel propriétaire]]
+[[Domaines d’utilisation de l’informatique]]
+[[Sécurité informatique]]
+[[Réglementation informatique]]
+[[CNIL]]
+[[Loi HADOPI]]
+[[Informatique en entreprise]]
+[[Rôle d’une DSI]]
+[[Prestataire informatique]]
+[[Grandes sociétés informatiques]]
+[[Parcours après un BTS SIO]]
+[[Objectifs de l'Association]]
+[[Adhérer]]
 ```
 
 ---
@@ -482,8 +481,8 @@ Modèle:Domaine métier
 ### Pages concernées
 
 ```wiki
-[Développement informatique]({{< ref "Développement informatique" >}})
-[Administration Réseau et système]({{< ref "Administration Réseau et système" >}})
+[[Développement informatique]]
+[[Administration Réseau et système]]
 ```
 
 ---
@@ -506,28 +505,28 @@ Pour garder un wiki clair, les pages thématiques peuvent suivre cette structure
 * Notion 3
 }}
 
-<mark> Introduction </mark>
+== Introduction ==
 
 Texte d’introduction.
 
-<mark> Développement </mark>
+== Développement ==
 
 Contenu principal de la page.
 
-<mark> Exemple dans l’association ResioClage </mark>
+== Exemple dans l’association ResioClage ==
 
 Exemple d’application dans le contexte de l’association.
 
-<mark> Pages liées </mark>
+== Pages liées ==
 
-* [Page liée 1]({{< ref "Page liée 1" >}})
-* [Page liée 2]({{< ref "Page liée 2" >}})
+* [[Page liée 1]]
+* [[Page liée 2]]
 
-<mark> À retenir </mark>
+== À retenir ==
 
 Résumé des points importants.
 
-[Accueil]({{< ref "Accueil" >}})
+[[Accueil]]
 ```
 
 ---
@@ -554,13 +553,13 @@ Les pages métiers du wiki regroupent plusieurs métiers dans une seule page.
 * Data Analyst
 }}
 
-<mark> Présentation du domaine </mark>
+== Présentation du domaine ==
 
 Texte de présentation.
 
-<mark> Métiers du développement informatique </mark>
+== Métiers du développement informatique ==
 
-=<mark> Développeur </mark>=
+=== Développeur ===
 
 Présentation du métier.
 
@@ -569,15 +568,15 @@ Ses missions principales sont :
 * mission 2 ;
 * mission 3.
 
-=<mark> Chef de projet informatique </mark>=
+=== Chef de projet informatique ===
 
 Présentation du métier.
 
-<mark> À retenir </mark>
+== À retenir ==
 
 Résumé.
 
-[Accueil]({{< ref "Accueil" >}})
+[[Accueil]]
 ```
 
 ---
@@ -595,20 +594,20 @@ Bienvenue au sein de l'association ResioClage !
 
 Ce wiki a pour objectif de présenter les principaux éléments liés aux métiers de l’informatique, à la sécurité, à la réglementation et à l’informatique en entreprise.
 
-<mark> ResioClage </mark>
+== ResioClage ==
 
 Cette section présente l’association ResioClage, ses objectifs, son rôle et les modalités pour y adhérer.
 
-* [Objectifs de l'Association]({{< ref "Objectifs de l'Association" >}})
-* [Adhérer]({{< ref "Adhérer" >}})
+* [[Objectifs de l'Association]]
+* [[Adhérer]]
 
-<mark> Métiers de l’informatique </mark>
+== Métiers de l’informatique ==
 
 Cette section regroupe les principales informations sur les métiers de l’informatique.
 
-* [Développement informatique]({{< ref "Développement informatique" >}})
-* [Administration Réseau et système]({{< ref "Administration Réseau et système" >}})
-* [Parcours après un BTS SIO]({{< ref "Parcours après un BTS SIO" >}})
+* [[Développement informatique]]
+* [[Administration Réseau et système]]
+* [[Parcours après un BTS SIO]]
 ```
 
 ---
@@ -620,7 +619,7 @@ Dans MediaWiki, un lien rouge indique que la page n’existe pas encore.
 ### Exemple
 
 ```wiki
-[Adhérer]({{< ref "Adhérer" >}})
+[[Adhérer]]
 ```
 
 Si la page n’existe pas, le lien apparaît en rouge. Il suffit de cliquer dessus pour créer la page.
@@ -637,10 +636,10 @@ Pour garder un wiki professionnel, il est recommandé de :
 - créer des liens internes entre les pages ;
 - ajouter une section **Pages liées** ;
 - ajouter une section **À retenir** ;
-- terminer par un lien vers `[Accueil]({{< ref "Accueil" >}})` ;
+- terminer par un lien vers `[[Accueil]]` ;
 - utiliser les modèles pour garder une présentation cohérente ;
 - éviter de copier-coller du contenu sans le reformuler ;
-- citer les sources dans la page `[Sources]({{< ref "Sources" >}})`.
+- citer les sources dans la page `[[Sources]]`.
 
 ---
 
@@ -649,25 +648,25 @@ Pour garder un wiki professionnel, il est recommandé de :
 Les principales pages du wiki sont :
 
 ```wiki
-[Accueil]({{< ref "Accueil" >}})
-[Objectifs de l'Association]({{< ref "Objectifs de l'Association" >}})
-[Adhérer]({{< ref "Adhérer" >}})
-[Développement informatique]({{< ref "Développement informatique" >}})
-[Administration Réseau et système]({{< ref "Administration Réseau et système" >}})
-[Parcours après un BTS SIO]({{< ref "Parcours après un BTS SIO" >}})
-[Logiciels et licences]({{< ref "Logiciels et licences" >}})
-[Open source et logiciel propriétaire]({{< ref "Open source et logiciel propriétaire" >}})
-[Domaines d’utilisation de l’informatique]({{< ref "Domaines d’utilisation de l’informatique" >}})
-[Sécurité informatique]({{< ref "Sécurité informatique" >}})
-[Réglementation informatique]({{< ref "Réglementation informatique" >}})
-[CNIL]({{< ref "CNIL" >}})
-[Loi HADOPI]({{< ref "Loi HADOPI" >}})
-[Informatique en entreprise]({{< ref "Informatique en entreprise" >}})
-[Rôle d’une DSI]({{< ref "Rôle d’une DSI" >}})
-[Prestataire informatique]({{< ref "Prestataire informatique" >}})
-[Grandes sociétés informatiques]({{< ref "Grandes sociétés informatiques" >}})
-[Sources]({{< ref "Sources" >}})
-[Historique des modifications]({{< ref "Historique des modifications" >}})
+[[Accueil]]
+[[Objectifs de l'Association]]
+[[Adhérer]]
+[[Développement informatique]]
+[[Administration Réseau et système]]
+[[Parcours après un BTS SIO]]
+[[Logiciels et licences]]
+[[Open source et logiciel propriétaire]]
+[[Domaines d’utilisation de l’informatique]]
+[[Sécurité informatique]]
+[[Réglementation informatique]]
+[[CNIL]]
+[[Loi HADOPI]]
+[[Informatique en entreprise]]
+[[Rôle d’une DSI]]
+[[Prestataire informatique]]
+[[Grandes sociétés informatiques]]
+[[Sources]]
+[[Historique des modifications]]
 ```
 
 ---
@@ -681,6 +680,6 @@ Dans le wiki ResioClage, les éléments les plus importants sont :
 - les liens internes pour relier les pages ;
 - les modèles pour uniformiser la présentation ;
 - les sections `Introduction`, `Pages liées` et `À retenir` ;
-- le lien `[Accueil]({{< ref "Accueil" >}})` en bas de page.
+- le lien `[[Accueil]]` en bas de page.
 
 Cette organisation permet d’obtenir un wiki clair, cohérent, professionnel et facile à maintenir.

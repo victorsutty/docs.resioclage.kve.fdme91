@@ -1,6 +1,6 @@
 
 
-## Mot de passe MediaWiki
+## Mot de passe MediaWiki Windows 10
 
 Identifiant : administrateur
 Mot de Passe : MediaWiki!!
