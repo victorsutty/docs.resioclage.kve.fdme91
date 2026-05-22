@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166.83 88.83">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 33.52px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: NeutrifStudio-Regular, 'Neutrif Studio';
+      }
+
+      .cls-2 {
+        font-size: 14.47px;
+      }
+
+      .cls-3 {
+        fill: #1d1d1b;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 2.02 2.02;
+        stroke-width: .5px;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-4, .cls-5, .cls-7 {
+        stroke: #1d1d1b;
+      }
+
+      .cls-5 {
+        stroke-width: 2px;
+      }
+
+      .cls-6 {
+        stroke: #000;
+        stroke-width: .25px;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-7 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <g>
+      <text class="cls-1" transform="translate(0 57.47)"><tspan class="cls-9" x="0" y="0">r</tspan><tspan class="cls-8" x="11.9" y="0">esi</tspan></text>
+      <text class="cls-1" transform="translate(85.54 52) rotate(-20.88)"><tspan x="0" y="0">clage</tspan></text>
+      <g>
+        <line class="cls-7" x1="68.96" y1="35.91" x2="68.96" y2="22.71"/>
+        <circle class="cls-3" cx="68.96" cy="22.71" r="2.06"/>
+      </g>
+      <g>
+        <line class="cls-7" x1="80.56" y1="53.63" x2="91.57" y2="59.04"/>
+        <circle class="cls-3" cx="91.57" cy="59.04" r="2.06"/>
+      </g>
+      <g>
+        <line class="cls-7" x1="63.03" y1="59.64" x2="55.99" y2="72.93"/>
+        <circle class="cls-3" cx="55.08" cy="73.97" r="2.06"/>
+      </g>
+      <circle class="cls-5" cx="68.96" cy="48.53" r="7.48"/>
+      <text class="cls-2" transform="translate(96.35 65.3)"><tspan x="0" y="0">docs</tspan></text>
+      <text class="cls-2" transform="translate(27.99 84.99)"><tspan x="0" y="0">env</tspan></text>
+      <text class="cls-2" transform="translate(66.9 16.97)"><tspan x="0" y="0">wiki</tspan></text>
+      <circle class="cls-4" cx="68.96" cy="48.48" r="12.24"/>
+      <g>
+        <circle class="cls-6" cx="68.99" cy="48.53" r="1"/>
+        <path class="cls-3" d="M69.44,44.55v3.05c-.1-.03-.26-.06-.45-.06-.19,0-.34.01-.45.03.01-1,.03-2,.04-3.01.14-.21.28-.43.41-.64.15.21.3.42.45.63Z"/>
+        <path class="cls-3" d="M68.53,52.49v-3.05c.1.03.25.06.43.06.18,0,.33-.01.43-.03-.01,1-.02,2-.04,3.01-.13.21-.26.43-.39.64-.14-.21-.29-.42-.43-.63Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
