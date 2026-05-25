@@ -1,6 +1,7 @@
 
 [[Gestion de la documentation DSI avec Quartz et Markdown]]
-
+https://bitlaunch.io/blog/how-to-update-npm/
+https://themes.gohugo.io/themes/hextra/
 
 Pour bénéficier d'un site ou l'on retrouve l'explication du code, des systèmes et des services hébergés chez resioclage, nous avons décidé de mettre en place Hugo, un moteur de rendu des pages Markdown.
 
